@@ -1,5 +1,5 @@
 # Flood-Rainfall-Disaster-Prediction-Website
-# NTT DATA HACKATHON
+# NTT-CodeForGood-DataScience-HACKATHON (Finalist)
 ## Disaster relief website from flood and rainfall.
 
 ## Welcome Page
