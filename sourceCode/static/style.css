@@ -1,0 +1,2223 @@
+/*--------------------------------------------------------------------------------------
+Theme Name: Carries
+Theme URI: http://devitfamily.com
+Author URI: http://devitfamily.com
+Description: 100% Responsive, Highly Customizable, SEO Friendly transportation and Agency Based Template using Twitter Bootstrap Latest, Search Engine Friendly.
+Author: OCREATES
+Version: 1.0
+----------------------------------------------------------------------------------------
+   1. BASE CSS
+    2. TOP AREA
+        2.1. SEARCH AND LANGUAGE
+        2.2 MAINMENU AREA
+        2.3 WELCOME TEXT AREA
+        2.4 WELCOME SLIDER AREA
+    3. BLOG AREA
+    4. ABOUT AREA
+    5. SERVICE AREA
+    6. SERVIE BOTTOM AREA
+    7. PROMO AREA
+    8. PROMO BOTTOM AREA
+    9. TESTMONIAL AREA
+    10. FOOTER AREA
+    11. FAQS AREA
+    12. ABOUT DETAILS CONTENT AREA
+    13. REPORT AREA
+    14. TEAM AERA
+    15. SERVICE TWO 
+    16. SERVICE THREE
+    17. CONTACT AREA
+    18. FOOTER AREA
+    19. SCROLL TO TOP
+    20. WELCOME SLIDER AREA
+    21. BLOG PAGE
+    22. SERVICE PAGE
+    23. 404 ERROR PAGE
+----------------------------------------------------------------------------------------*/
+
+/*--------------------
+   1. BASE CSS
+----------------------*/
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,500i,700');
+.alignleft {
+    float: left;
+    margin-right: 15px;
+}
+
+.alignright {
+    float: right;
+    margin-left: 15px;
+}
+
+.aligncenter {
+    display: block;
+    margin: 0 auto 15px;
+}
+
+a {
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+
+a:focus,
+a:hover {
+    outline: 0 solid;
+    text-decoration: none;
+}
+
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+button:focus {
+    outline: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #3c4a62;
+    margin: 0 0 15px;
+    font-weight: 700;
+    line-height: 1.4em;
+    text-transform: uppercase;
+    position: relative;
+}
+
+h2 {
+    font-size: 36px;
+}
+
+html,
+body {
+    height: 100%
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    line-height: 1.7em;
+    font-weight: 400;
+    color: #687284;
+}
+
+a:hover,
+a:focus {
+    text-decoration: none;
+    outline: 0;
+}
+
+a {
+    color: #5d6b82;
+}
+
+.fix {
+    overflow: hidden;
+}
+
+.relative {
+    position: relative;
+    overflow: hidden;
+}
+
+.absulute {
+    position: absolute;
+}
+
+.v-center {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.content-center {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: 100%;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.flex-v-center {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.social-bookmark li {
+    display: inline;
+}
+
+.social-bookmark li a {
+    background: #d7d7d7 none repeat scroll 0 0;
+    border-radius: 50%;
+    color: #fff;
+    display: inline-block;
+    font-size: 16px;
+    height: 40px;
+    margin: 0 2px;
+    padding-top: 9px;
+    text-align: center;
+    width: 40px;
+}
+
+.social-bookmark li a:hover {
+    background: #f39c12 none repeat scroll 0 0;
+    color: #fff;
+}
+
+.inline li {
+    display: inline;
+}
+
+.inline-block li {
+    display: inline-block;
+    padding: 5px 15px;
+}
+
+.navbar-toggle {
+    border: 2px solid #f39c12;
+    border-radius: 0;
+}
+
+.navbar-toggle .icon-bar {
+    background: #f39c12 none repeat scroll 0 0;
+}
+
+.no-margin {
+    margin: 0;
+}
+
+.no-padding {
+    padding: 0;
+}
+
+.border {
+    border: 1px solid #ddd;
+}
+
+.border-left {
+    border-left: 1px solid #ddd;
+}
+
+.border-right {
+    border-right: 1px solid #ddd;
+}
+
+.border-top {
+    border-top: 1px solid #ddd;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #ddd;
+}
+
+
+/* Remove Chrome Input Field's Unwanted Yellow Background Color */
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+}
+
+.area-title {
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.area-title h2 {
+    display: inline-block;
+    font-size: 40px;
+    letter-spacing: 2px;
+    line-height: 1;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.area-title h2::before,
+.area-title h2::after {
+    background: rgba(0, 0, 0, 0) url("img/title-border.png") repeat scroll 0 0;
+    bottom: 0;
+    content: "";
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 100px;
+}
+
+.area-title h2::after {
+    background: #f39c12 none repeat scroll 0 0;
+    height: 4px;
+    width: 20px;
+}
+
+.section-padding {
+    padding: 100px 0;
+}
+
+.padding-top {
+    padding-top: 100px;
+}
+
+.padding-bottom {
+    padding-bottom: 100px;
+}
+
+.padding-100-70 {
+    padding-top: 100px;
+    padding-bottom: 70px;
+}
+
+.padding-100-50 {
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+
+.gray-bg {
+    background: #f7f9fc;
+}
+
+.deep-gray-bg {
+    background: #eff1ff;
+}
+
+.dark-bg {
+    background: #5d6b82;
+    color: #ffffff;
+}
+
+.red-bg {
+    background: #f39c12;
+    color: #ffffff;
+}
+
+.blue-bg {
+    background: #0083ff;
+    color: #ffffff;
+}
+
+.soft-blue-bg {
+    background: #7db9e8;
+    color: #ffffff;
+}
+
+.dark-bg .area-title h2 {
+    color: #ffffff;
+}
+
+/*--------------------------
+    2. TOP AREA
+---------------------------*/
+
+.top-area {
+    height: 100%;
+    position: relative;
+    width: 100%;
+}
+
+.top-area-bg {
+    background: rgba(0, 0, 0, 0) url("img/slider/slide_1.jpg") no-repeat scroll center center / cover;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.top-area-bg::after {
+    background: #3c4147;
+    content: "";
+    height: 100%;
+    left: 0;
+    opacity: 0.9;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+
+/*---------------------------------
+    2.1. SEARCH AND LANGUAGE
+----------------------------------*/
+
+.search-and-language-bar {
+    margin-left: 20px;
+    margin-top: 30px;
+    position: relative;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+
+}
+
+.is-sticky .search-and-language-bar {
+    margin-top: 10px;
+}
+
+.search-and-language-bar ul li {
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    line-height: 1;
+    padding: 10px;
+}
+
+.search-and-language-bar ul li a {
+    color: #fff;
+    display: block;
+}
+
+.search-box {
+    position: relative;
+}
+
+.search-form {
+    background: #fff none repeat scroll 0 0;
+    border-radius: 5px;
+    top: 72px;
+    height: 60px;
+    position: absolute;
+    right: 0;
+    width: 280px;
+    display: none;
+}
+
+.is-sticky .search-form {
+    top: 50px;
+}
+
+.search-form input {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 center;
+    border: 1px solid #f39c12;
+    color: #333;
+    height: 40px;
+    left: 11px;
+    padding: 10px;
+    position: absolute;
+    top: 10px;
+    width: 77%;
+}
+
+.search-form button {
+    background: transparent none repeat scroll 0 0;
+    border: 1px solid #f39c12;
+    color: #f39c12;
+    font-size: 20px;
+    height: 40px;
+    padding: 7px 12px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+
+.search-form button:hover {
+    background: #f39c12 none repeat scroll 0 0;
+    color: #fff;
+}
+
+.select-language select {
+    background: #fff;
+    border: 0 none;
+    color: #333;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    position: relative;
+}
+
+/*---------------------------------
+    2.2 MAINMENU AREA
+-----------------------------------*/
+
+.header-top-area {
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+.mainmenu-area {
+    border-bottom: 1px solid rgba(243, 156, 18, .4);
+    position: relative;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    z-index: 9999;
+}
+
+.navbar-header {
+    margin-top: 14px;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+
+.navbar {
+    border-bottom: 0 none;
+    border-top: 0 none;
+    margin-bottom: 0;
+}
+
+.navbar-brand > img {
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+
+.is-sticky .navbar-brand > img {
+    max-width: 80%;
+}
+
+ul#nav {
+    float: right;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+
+ul#nav li a {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    color: #ffffff;
+    letter-spacing: 1px;
+    padding: 40px 15px;
+    text-transform: uppercase;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+
+ul#nav li a:hover,
+ul#nav li.active a {
+    color: #f39c12;
+}
+
+.is-sticky ul#nav li a {
+    padding: 20px 15px;
+    color: #ffffff;
+}
+
+.is-sticky ul#nav li a:hover,
+.is-sticky ul#nav li.active a {
+    color: #f39c12;
+}
+
+.is-sticky .navbar-header {
+    margin-top: -2px;
+}
+
+.is-sticky .mainmenu-area {
+    background: #212121;
+    -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
+    z-index: 99999;
+}
+
+.menu-toggle.full {
+    border: 1px solid;
+    height: 40px;
+    letter-spacing: 2px;
+    padding-top: 8px;
+    position: absolute;
+    right: 15px;
+    text-align: center;
+    top: 20px;
+    width: 110px;
+    color: #f39c12 !important;
+}
+
+.is-sticky .menu-toggle.full {
+    top: 8px;
+}
+
+ul#nav li ul a,
+.is-sticky ul#nav li ul a {
+    border-bottom: 1px solid #1a1a1a;
+    padding: 10px;
+    padding-left: 15px;
+}
+
+/*-----------------------------------
+    2.3 WELCOME TEXT AREA
+-------------------------------------*/
+
+.welcome-area {
+    color: #ffffff;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: 100%;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding-top: 100px;
+    width: 100%;
+}
+
+.welcome-text h1 {
+    color: #ffffff;
+    font-size: 60px;
+    letter-spacing: 5px;
+    line-height: 1.3;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.welcome-text h4 {
+    font-size: 20px;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+}
+
+.home-button {
+    margin-top: 60px;
+    height: auto !important;
+}
+
+.home-button a {
+    border: 2px solid;
+    border-radius: 3px;
+    color: #fff;
+    letter-spacing: 2px;
+    padding: 12px 30px;
+    text-transform: uppercase;
+}
+
+.home-button a:last-child {
+    margin-left: 20px;
+}
+
+.home-button a:hover {
+    background: #f39c12 none repeat scroll 0 0;
+    border-color: #f39c12;
+    color: #ffffff;
+}
+
+.home-mockup > img {
+    max-width: 50%;
+}
+
+/*------------------------------
+    2.4 WELCOME SLIDER AREA
+--------------------------------*/
+
+.welcome-slider-area {
+    height: 100%;
+    position: relative;
+    z-index: 9;
+}
+
+.welcome-slider-area.owl-carousel div:not(.owl-controls) {
+    height: 100%;
+}
+
+.welcome-single-slide {
+    z-index: 9;
+    position: relative;
+}
+
+.welcome-single-slide:before {
+    background: #3c4147;
+    content: "";
+    height: 100%;
+    left: 0;
+    opacity: 0.7;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+.welcome-slider-area .welcome-text {
+    color: #FFFFFF;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding-top: 100px;
+}
+
+.welcome-text h4 {
+    margin-bottom: 30px;
+}
+
+.welcome-text h2 {
+    color: #fff;
+    line-height: 1;
+    margin-bottom: 30px;
+}
+
+.welcome-slider-area.home-button {
+    height: auto !important;
+}
+
+.owl-item.active .welcome-single-slide .welcome-text h1 {
+    -webkit-animation: 1s ease 0.5s normal both 1 running fadeInUp;
+    animation: 1s ease 0.5s normal both 1 running fadeInUp;
+}
+
+.owl-item.active .welcome-single-slide .welcome-text p {
+    -webkit-animation: 1s ease 0.8s normal both 1 running fadeInUp;
+    animation: 1s ease 0.8s normal both 1 running fadeInUp;
+}
+
+.owl-item.active .welcome-single-slide .home-button {
+    -webkit-animation: 1s ease 1s normal both 1 running fadeInUp;
+    animation: 1s ease 1s normal both 1 running fadeInUp;
+}
+
+.slider-bg-one {
+    background: url(img/slider/slide_1.jpg) no-repeat scroll center center / cover;
+}
+
+.slider-bg-two {
+    background: url(img/slider/slide_2.jpg) no-repeat scroll center center / cover;
+}
+
+.slider-bg-three {
+    background: url(img/slider/slide_3.jpg) no-repeat scroll center center / cover;
+}
+
+.welcome-slider-area.owl-carousel .owl-nav > div {
+    background: #fff none repeat scroll 0 0;
+    display: inline-block;
+    font-size: 30px;
+    height: 40px;
+    margin: 0 5px;
+    padding-top: 5px;
+    text-align: center;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    width: 40px;
+}
+
+.welcome-slider-area.owl-carousel .owl-controls {
+    bottom: 7%;
+    position: absolute;
+    right: 8.4%;
+}
+
+.welcome-slider-area.owl-carousel .owl-nav > div:hover {
+    background: #f39c12 none repeat scroll 0 0;
+    color: #fff;
+}
+
+/* ----------------------------
+    3. BLOG AREA
+------------------------------ */
+
+.single-blog {
+    border-radius: 5px;
+    -webkit-box-shadow: 0 3px 7px #ddd;
+    box-shadow: 0 3px 7px #ddd;
+    overflow: hidden;
+}
+
+.blog-details {
+    background: #fff none repeat scroll 0 0;
+    padding: 30px 20px;
+    position: relative;
+}
+
+.blog-meta {
+    background: #f39c12 none repeat scroll 0 0;
+    border-radius: 0 50px 50px 0;
+    font-size: 24px;
+    height: 50px;
+    left: 0;
+    position: absolute;
+    text-align: center;
+    top: -25px;
+    width: 70px;
+}
+
+.blog-meta a {
+    color: #fff;
+    display: block;
+    height: 100%;
+    padding-top: 13px;
+    width: 100%;
+}
+
+.blog-details h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.read-more {
+    background: #5d6b82 none repeat scroll 0 0;
+    border-radius: 5px;
+    color: #fff;
+    display: inline-block;
+    height: 40px;
+    margin-top: 15px;
+    padding: 7px 25px;
+    text-align: center;
+    width: 140px;
+}
+
+.read-more:hover,
+.read-more:focus {
+    background: #f39c12;
+    color: #fff;
+}
+
+.blog-details h3 a {
+    color: #3c4a62;
+}
+
+.blog-details h3 a:hover,
+.blog-details h3 a:focus {
+    color: #f39c12;
+}
+
+/* ----------------------------
+    4. ABOUT AREA
+------------------------------ */
+
+.quote-form-area {
+    background: #eef1f5 none repeat scroll 0 0;
+    padding: 30px 20px;
+}
+
+.quote-form input {
+    margin-bottom: 10px;
+}
+
+.quote-form .width-full input {
+    border: 0 none;
+    padding: 10px;
+    width: 100%;
+}
+
+.quote-form .width-half input {
+    border: 0 none;
+    padding: 10px;
+    width: 47%;
+}
+
+.quote-form textarea {
+    border: 0 none;
+    height: 120px;
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 100%;
+}
+
+
+.quote-form button {
+    background: #5d6b82 none repeat scroll 0 0;
+    border: 0 none;
+    border-radius: 5px;
+    color: #fff;
+    letter-spacing: 2px;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+
+.quote-form button:hover {
+    background: #f39c12;
+    color: #fff;
+}
+
+.about-content h2 {
+    margin-bottom: 30px;
+}
+
+.about-content a {
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.about-content a:hover {
+    color: #f39c12;
+}
+
+.about-content a i {
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.about-content a:hover i {
+    padding-left: 10px;
+}
+
+.about-count {
+    margin-top: 80px;
+}
+
+.single-about-count {
+    background: #fff none repeat scroll 0 0;
+    float: left;
+    padding: 30px 20px 20px;
+    text-align: center;
+    text-transform: capitalize;
+    width: 33.33%;
+}
+
+.single-about-count h4 {
+    color: #f39c12;
+    font-size: 24px;
+    font-weight: 800;
+}
+
+/* -----------------------------
+    5. SERVICE AREA
+------------------------------- */
+
+.service-content h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    position: relative;
+}
+
+.service-content h2::after {
+    border-bottom: 1px dashed rgb(243, 156, 18);
+    bottom: 0;
+    content: "";
+    height: 1px;
+    left: 0;
+    position: absolute;
+    width: 50px;
+}
+
+.service-catalouge-content-area {
+    background: rgba(0, 0, 0, 0) url("img/service/service-cargo-bg.png") no-repeat scroll center center / contain;
+    position: relative;
+}
+
+.catalouge-content {
+    background: rgba(243, 156, 18, 0.9) none repeat scroll 0 0;
+    color: #fff;
+    padding: 30px;
+}
+
+.catalouge-content h3 {
+    color: #fff;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    position: relative;
+}
+
+.catalouge-content h3::after {
+    border-bottom: 1px dashed;
+    bottom: 0;
+    content: "";
+    height: 2px;
+    left: 0;
+    position: absolute;
+    width: 50px;
+}
+
+.catalouge-content .read-more:hover,
+.catalouge-content .read-more:focus {
+    background: #fff none repeat scroll 0 0;
+    color: #f39c12;
+}
+
+.catalouge-content ul {
+    margin-top: 40px;
+}
+
+.catalouge-content ul li {
+    margin-bottom: 15px;
+}
+
+.catalouge-content ul li i {
+    margin-right: 15px;
+}
+
+/* ---------------------------
+    6. SERVIE BOTTOM AREA
+----------------------------- */
+
+.service-bottom-area {
+    position: relative;
+}
+
+.service-bottom-area-bg {
+    background: rgba(0, 0, 0, 0) url("img/service/service-area-bg.jpg") repeat scroll 0 0;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.service-bottom-area-bg::after {
+    background: #f5f7f9 none repeat scroll 0 0;
+    content: "";
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50%;
+}
+
+.single-service {
+    margin-bottom: 50px;
+    padding-left: 80px;
+    position: relative;
+}
+
+.service-list .single-service:last-child {
+    margin-bottom: 0;
+}
+
+.service-icon-hexagon {
+    left: -43px;
+    position: absolute;
+    top: -25px;
+}
+
+.hex {
+    background: #f5f7f9 none repeat scroll 0 0;
+    border-radius: 1em / 3.5em;
+    display: inline-block;
+    height: 5.2em;
+    margin: 1em 4.61538em 1em auto;
+    position: relative;
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    -webkit-transition: all 150ms ease-in-out 0s;
+    transition: all 150ms ease-in-out 0s;
+    width: 4em;
+}
+
+.hex:before,
+.hex:after {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    border-radius: inherit;
+    background: inherit;
+    content: '';
+}
+
+.hex:before {
+    -webkit-transform: rotate(60deg);
+    transform: rotate(60deg);
+}
+
+.hex:after {
+    -webkit-transform: rotate(-60deg);
+    transform: rotate(-60deg);
+}
+
+.service-icon {
+    background: #5d6b82 none repeat scroll 0 0;
+    bottom: 7px;
+    color: #fff;
+    font-size: 24px;
+    height: 60px;
+    padding-top: 18px;
+    position: absolute;
+    right: 11px;
+    text-align: center;
+    -webkit-transform: rotate(60deg);
+    transform: rotate(60deg);
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    width: 34px;
+    z-index: 1;
+}
+
+.service-icon::before,
+.service-icon::after {
+    background: #5d6b82 none repeat scroll 0 0;
+    content: "";
+    height: 100%;
+    position: absolute;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    width: 100%;
+    z-index: -1;
+}
+
+.service-icon::before {
+    bottom: 0;
+    right: 0;
+    -webkit-transform: rotate(60deg);
+    transform: rotate(60deg);
+}
+
+.service-icon::after {
+    bottom: 0;
+    right: 0;
+    -webkit-transform: rotate(-60deg);
+    transform: rotate(-60deg);
+}
+
+.service-icon i {
+    -webkit-transform: rotate(30deg);
+    transform: rotate(30deg);
+}
+
+.service-details h4 {
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+
+.single-service:hover .service-details h4 {
+    color: #f39c12;
+}
+
+.single-service:hover .service-icon,
+.single-service:hover .service-icon::before,
+.single-service:hover .service-icon::after {
+    background: #f39c12 none repeat scroll 0 0;
+}
+
+/* ----------------------------
+    7. PROMO AREA
+----------------------------- */
+
+.promo-top-area {
+    background: rgba(0, 0, 0, 0) url("img/promo/promo_top_bg.png") no-repeat scroll right 5% bottom 50% / 40% auto;
+}
+
+.single-promo {
+    margin-bottom: 50px;
+    padding: 20px 20px 20px 80px;
+    position: relative;
+}
+
+.promo-area .row > div.col-lg-4 .single-promo:last-child {
+    margin-bottom: 0;
+}
+
+.promo-icon {
+    background: #f4f7f9 none repeat scroll 0 0;
+    border-radius: 50%;
+    color: #f39c12;
+    font-size: 24px;
+    height: 65px;
+    left: 0;
+    padding-top: 21px;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 65px;
+}
+
+/* -----------------------------
+    8. PROMO BOTTOM AREA
+----------------------------- */
+
+.promo-bottom-area {
+    position: relative;
+}
+
+.promo-botton-area-bg {
+    background: rgba(0, 0, 0, 0) url("img/promo/promo_bottom_bg.jpg") no-repeat scroll center center / cover;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.promo-botton-area-bg::after {
+    background: #3c4a62 none repeat scroll 0 0;
+    content: "";
+    height: 100%;
+    left: 0;
+    opacity: 0.9;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.promo-bottom-area h2 {
+    color: #fff;
+    font-size: 26px;
+}
+
+.promo-bottom-content .read-more {
+    background: #f39c12 none repeat scroll 0 0;
+    font-weight: bold;
+    height: auto;
+    letter-spacing: 1px;
+    padding: 14px;
+    text-transform: uppercase;
+    width: 180px;
+}
+
+.promo-bottom-area .read-more:hover,
+.promo-bottom-area .read-more:focus {
+    background: #fff none repeat scroll 0 0;
+    color: #f39c12;
+}
+
+/*-----------------------------
+    9. TESTMONIAL AREA
+-------------------------------*/
+
+.client-photo-list .item {
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 10px 0;
+}
+
+.client-photo-list .owl-carousel .owl-item.active.center .item {
+    -webkit-box-shadow: 0 0 0 5px #f39c12;
+    box-shadow: 0 0 0 5px #f39c12;
+    position: relative;
+    z-index: 999;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.client-photo-list {
+    margin-bottom: 40px;
+}
+
+.client-details-content .item {
+    padding-top: 70px;
+    position: relative;
+}
+
+.client-details-content .item::after {
+    color: #5d6b82;
+    content: "\f10d";
+    font-family: fontawesome;
+    font-size: 60px;
+    height: 60px;
+    left: 50%;
+    line-height: 1;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 60px;
+}
+
+.client-details-content .item q {
+    display: block;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 500;
+    line-height: 1.5em;
+    margin-bottom: 37px;
+}
+
+.client-details-content .item h3 {
+    margin-bottom: 10px;
+}
+
+.client_nav span {
+    background: #5d6b82 none repeat scroll 0 0;
+    border-radius: 5px;
+    color: #fff;
+    display: inline-block;
+    font-size: 30px;
+    height: 40px;
+    left: 50px;
+    opacity: 0;
+    padding-top: 3px;
+    position: absolute;
+    text-align: center;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    width: 50px;
+    cursor: pointer;
+}
+
+.client_nav span:hover {
+    background: #f39c12;
+}
+
+.client_nav span.fa.testi_next {
+    left: auto;
+    right: 50px;
+}
+
+.testmonial-area:hover .client_nav span {
+    left: 0;
+    opacity: 1;
+}
+
+.testmonial-area:hover .client_nav span.testi_next {
+    left: auto;
+    right: 0;
+}
+
+/* -----------------------------
+    10. FOOTER AREA
+------------------------------- */
+
+.footer-top-area {
+    padding: 70px 0;
+}
+
+.footer-area h2,
+.footer-area h3 {
+    color: #fff;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.subscribe-content h2 {
+    line-height: 1;
+    margin-bottom: 20px;
+}
+
+.subsriber-form {
+    height: 60px;
+    position: relative;
+}
+
+.subsriber-form input {
+    background: #fff none repeat scroll 0 0;
+    border: 0 none;
+    border-radius: 5px;
+    color: #363;
+    height: 100%;
+    left: 0;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    width: 70%;
+}
+
+.subsriber-form button {
+    background: #f39c12 none repeat scroll 0 0;
+    border: 0 none;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: 500;
+    height: 100%;
+    letter-spacing: 1px;
+    position: absolute;
+    right: 0;
+    text-transform: uppercase;
+    top: 0;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    width: 27%;
+}
+
+.subsriber-form button:hover {
+    background: #fff none repeat scroll 0 0;
+    color: #f39c12;
+}
+
+/* ----------------------------
+    11. FAQS AREA
+------------------------------- */
+
+.faqs-list h3 {
+    margin-bottom: 30px;
+}
+
+.faqs-list h3 span {
+    color: #f39c12;
+}
+
+.faqs-list #accordion .panel-title {
+    padding-left: 50px;
+    position: relative;
+    text-transform: capitalize;
+}
+
+.faqs-list #accordion .panel-title i {
+    background: #f39c12 none repeat scroll 0 0;
+    color: #fff;
+    height: 30px;
+    left: 0;
+    padding-top: 8px;
+    position: absolute;
+    text-align: center;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    width: 30px;
+}
+
+.faqs-list #accordion .panel-title i::after {
+    background: #fff none repeat scroll 0 0;
+    content: "";
+    height: 12px;
+    left: 50%;
+    margin-left: -1.5px;
+    margin-top: -6px;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    width: 3px;
+}
+
+.faqs-list #accordion .active .panel-title i::after {
+    opacity: 1;
+    ;
+}
+
+.faqs-list #accordion .panel,
+.faqs-list #accordion .panel.active {
+    border-bottom: 0 none;
+    -webkit-box-shadow: 0 0 0 #fff;
+    box-shadow: 0 0 0 #fff;
+}
+
+.panel-body {
+    border: 0 none !important;
+}
+
+.panel-heading,
+.panel-body {
+    padding-left: 0;
+}
+
+/* -----------------------------
+    12. ABOUT DETAILS CONTENT AREA
+-------------------------------- */
+
+.about-details-menu {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.about-details-menu li {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.about-details-menu li a {
+    border: 1px solid #efefef;
+    display: block;
+    font-size: 18px;
+    padding: 12px 20px;
+    text-transform: uppercase;
+}
+
+.about-details-menu li.active a {
+    background: #f39c12 none repeat scroll 0 0;
+    border-color: #f39c12;
+    color: #fff;
+}
+
+.about-history-content {
+    margin-bottom: 50px;
+}
+
+.about-history-content h3 {
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+}
+
+.about-history-content h3::after {
+    border-bottom: 1px dashed #f39c12;
+    bottom: 0;
+    content: "";
+    height: 1px;
+    left: 0;
+    position: absolute;
+    width: 50px;
+}
+
+.about-history-content ul {
+    margin-top: 20px;
+}
+
+.about-history-content ul li {
+    margin-bottom: 5px;
+}
+
+.about-history-content.history-list {
+    position: relative;
+}
+
+.about-history-content.history-list::after {
+    background: #e4e4e4;
+    content: "";
+    height: 100%;
+    left: 80px;
+    position: absolute;
+    top: 0;
+    width: 5px;
+}
+
+.single-history {
+    margin-bottom: 50px;
+    padding-left: 125px;
+    position: relative;
+}
+
+.single-history .history-year {
+    font-size: 18px;
+    font-weight: 700;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 85px;
+}
+
+.single-history .history-year::before,
+.single-history .history-year::after {
+    background: #fff none repeat scroll 0 0;
+    border-radius: 50%;
+    content: "";
+    height: 30px;
+    position: absolute;
+    right: -12px;
+    top: 0;
+    width: 30px;
+    z-index: 9;
+}
+
+.single-history .history-year::after {
+    background: #f39c12;
+    height: 10px;
+    right: -2px;
+    top: 9px;
+    width: 10px;
+}
+
+/* ------------------------------
+    13. REPORT AREA
+------------------------------ */
+
+.annual-reports > div {
+    margin-bottom: 50px;
+}
+
+.annual-reports > div:last-child {
+    margin-bottom: 0px;
+}
+
+.annual-reports-content h4 {
+    margin-bottom: 30px;
+}
+
+.annual-reports-content ul {
+    margin-top: 30px;
+}
+
+.annual-reports-content ul li {
+    margin-bottom: 10px;
+}
+
+.annual-reports-content ul li i {
+    color: #f39c12;
+    margin-right: 10px;
+}
+
+/* ----------------------------
+    14. TEAM AERA
+-------------------------------- */
+
+.single-team {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 1px;
+}
+
+.team-list div > .col-lg-4:last-child .single-team {
+    margin-bottom: 0;
+}
+
+.single-team .member-image img {
+    width: 100%;
+}
+
+.member-details {
+    -webkit-box-shadow: 0 0 1px;
+    box-shadow: 0 0 1px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 30px 20px;
+}
+
+.member-social-bookmark {
+    background: #5d6b82 none repeat scroll 0 0;
+    border-radius: 5px;
+    margin-top: 25px;
+    padding: 15px 0;
+}
+
+.member-social-bookmark .social-bookmark li a {
+    background: rgba(255, 255, 255, 0.2) none repeat scroll 0 0;
+    padding-top: 8px;
+}
+
+.member-social-bookmark .social-bookmark li a:hover {
+    background: #f39c12 none repeat scroll 0 0;
+}
+
+/* -----------------------------
+    15. SERVICE TWO 
+------------------------------ */
+
+.single-service-two {
+    padding: 30px 20px 30px 100px;
+    position: relative;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+
+.service-icon-two {
+    border-right: 1px solid #ddd;
+    color: #f39c12;
+    font-size: 30px;
+    left: 0;
+    position: absolute;
+    text-align: center;
+    width: 80px;
+}
+
+.single-service-two:hover {
+    background: #f39c12 none repeat scroll 0 0;
+    color: #fff;
+}
+
+.single-service-two:hover .service-icon-two,
+.single-service-two:hover h4 {
+    color: inherit;
+}
+
+/* ----------------------------
+    16. SERVICE THREE
+------------------------------ */
+
+.single-service-three {
+    border: 1px solid #eef2f4;
+    -webkit-box-shadow: 0 0 10px #eef2f4;
+    box-shadow: 0 0 10px #eef2f4;
+    margin-bottom: 30px;
+    padding: 30px 20px 30px 80px;
+    position: relative;
+}
+
+.single-service-three h4 {
+    color: #f39c12;
+}
+
+.service-icon-three {
+    border-right: 1px solid #ddd;
+    color: #f39c12;
+    font-size: 30px;
+    left: 0;
+    position: absolute;
+    text-align: center;
+    width: 60px;
+}
+
+/*------------------------------
+    17. CONTACT AREA
+-------------------------------*/
+
+.contact-address {
+    margin-bottom: 50px;
+}
+
+.contact-address a {
+    color: #585858;
+}
+
+.contact-address a:hover {
+    color: #f39c12;
+}
+
+.contact-area .form-control {
+    border-radius: 0;
+    margin-bottom: 30px;
+    min-height: 40px;
+}
+
+.contact-area button {
+    background: #5d6b82 none repeat scroll 0 0;
+    border: 0 none;
+    border-radius: 3px;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 2px;
+    padding: 10px 40px;
+    text-transform: uppercase;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+
+.contact-area button:hover {
+    background: #f39c12 none repeat scroll 0 0;
+    color: #fff;
+}
+
+/*------------------------------
+    18. FOOTER AREA
+-------------------------------*/
+
+.footer-area {
+    color: #ffffff;
+    position: relative;
+    z-index: 9;
+}
+
+.footer-area::after {
+    background: rgba(0, 0, 0, 0) url("img/footer-map-bg.png") no-repeat scroll center center / 90% auto;
+    content: "";
+    height: 100%;
+    left: 0;
+    opacity: 0.1;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+.footer-border {
+    background: rgba(0, 0, 0, 0) url("img/footer-border.png") repeat-x scroll center center;
+    height: 1px;
+    margin-top: 50px;
+}
+
+.single-footer-widget {
+    margin-bottom: 50px;
+    overflow: hidden;
+}
+
+.single-footer-widget,
+.single-footer-widget a {
+    color: #a1a7b2;
+}
+
+.single-footer-widget a:hover {
+    color: #f39c12;
+}
+
+.single-footer-widget h3 {
+    font-size: 20px;
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.single-footer-widget h3::after {
+    border-bottom: 1px dashed #f39c12;
+    bottom: 0;
+    content: "";
+    height: 1px;
+    left: 0;
+    position: absolute;
+    width: 50px;
+}
+
+.single-footer-widget.footer-about ul {
+    margin-top: 30px;
+}
+
+.single-footer-widget.footer-about ul li {
+    margin-bottom: 10px;
+}
+
+.single-footer-widget.footer-about ul li i {
+    border-right: 1px solid;
+    margin-right: 10px;
+    width: 20px;
+}
+
+.single-footer-widget.twitter-widget ul li {
+    margin-bottom: 20px;
+    padding-left: 30px;
+    position: relative;
+}
+
+.single-footer-widget.twitter-widget ul li .twitter-icon {
+    color: #f39c12;
+    left: 0;
+    position: absolute;
+}
+
+.single-footer-widget.list-widget ul li {
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.single-footer-widget.list-widget ul li::before {
+    content: "\f0a4";
+    display: inline-block;
+    font-family: fontawesome;
+    margin-right: 15px;
+}
+
+.single-footer-widget.instafeed-widget li {
+    float: left;
+    margin-bottom: 2%;
+    margin-right: 2%;
+    width: 31.33%;
+}
+
+.footer-bottom-area .footer-border {
+    margin: 0;
+}
+
+.footer-copyright-area {
+    padding: 30px 0;
+}
+
+.footer-copyright p {
+    margin-bottom: 0;
+    margin-top: 10px;
+}
+
+.footer-copyright a.footer-logo {
+    border-bottom: 2px solid;
+    display: block;
+    margin-bottom: 5px;
+    margin-right: 10px;
+    max-width: 300px;
+    padding-bottom: 10px;
+}
+
+.footer-copyright a {
+    color: #ffffff;
+}
+
+.footer-social-bookmark .social-bookmark li a {
+    background: rgba(255, 255, 255, 0.1) none repeat scroll 0 0;
+    border-radius: 50%;
+    color: #fff;
+    display: inline-block;
+    font-size: 14px;
+    height: 30px;
+    margin: 0 2px;
+    padding-top: 3px;
+    text-align: center;
+    width: 30px;
+}
+
+.footer-social-bookmark .social-bookmark li a:hover {
+    background: #f39c12;
+    color: #fff;
+}
+
+/*------------------------------
+    19. SCROLL TO TOP
+-------------------------------*/
+
+a.scrolltotop {
+    background: #f39c12 none repeat scroll 0 0;
+    bottom: 20px;
+    -webkit-box-shadow: 0 0 0 7px transparent;
+    box-shadow: 0 0 0 7px transparent;
+    color: #ffffff;
+    display: none;
+    font-size: 20px;
+    height: 40px;
+    padding-top: 5px;
+    position: fixed;
+    right: 20px;
+    text-align: center;
+    width: 40px;
+    z-index: 99;
+}
+
+a.scrolltotop:hover {
+    -webkit-box-shadow: 0 0 0 0 #272727;
+    box-shadow: 0 0 0 0 #272727;
+    background: #272727;
+}
+
+/*-----------------------------------
+    20. WELCOME SLIDER AREA
+-------------------------------------*/
+
+.home-two .single-blog {
+    margin-top: -244px;
+}
+
+.home-two .welcome-area {
+    padding-bottom: 200px;
+}
+
+.home-two .blog-area.blog-bottom .single-blog {
+    margin-top: 0;
+}
+
+.home-four .about-area.section-padding {
+    padding-bottom: 50px;
+}
+
+.home-four .promo-top-area.section-padding {
+    background: inherit;
+    padding-bottom: 50px;
+}
+
+.home-four .service-bottom-area-bg {
+    background: rgba(0, 0, 0, 0) url("img/service/service-area-bg-2.jpg") repeat scroll 0 0;
+}
+
+.top-area.single-page {
+    height: 500px;
+}
+
+.single-page .top-area-bg::after {
+    opacity: 0.7;
+}
+
+.single-page .welcome-text h2 {
+    margin-bottom: 10px;
+}
+
+.page-location li {
+    display: inline-block;
+}
+
+.page-location li a {
+    color: #fff;
+    display: block;
+    padding: 0 10px;
+}
+
+/* ----------------------------------
+    21. BLOG PAGE
+------------------------------------- */
+
+.blog-page .single-blog {
+    border-radius: 0;
+    margin-bottom: 50px;
+}
+
+.blog-page .single-blog .post-date {
+    margin-bottom: 20px;
+    margin-top: -10px;
+}
+
+.blog-page .single-blog .post-date a i {
+    margin-right: 10px;
+}
+
+.blog-page .single-blog .post-date a:hover {
+    color: #f39c12;
+}
+
+.blog-page .blog-image img {
+    width: 100%;
+}
+
+.pagination li a {
+    border-radius: 0;
+    color: #666;
+    padding: 10px 20px;
+}
+
+.pagination li a:hover,
+.pagination li.active a,
+.pagination li a:focus {
+    background: #f39c12 none repeat scroll 0 0;
+    color: #fff;
+    border-color: #f39c12;
+}
+
+.single-sidebar-widget {
+    -webkit-box-shadow: 0 3px 7px #ddd;
+    box-shadow: 0 3px 7px #ddd;
+    margin-bottom: 50px;
+    padding: 20px;
+}
+
+.single-sidebar-widget h4::after {
+    border-bottom: 1px dashed #f39c12;
+    bottom: 0;
+    content: "";
+    height: 1px;
+    left: 0;
+    position: absolute;
+    width: 50px;
+}
+
+.single-sidebar-widget h4 {
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+}
+
+.widget_search form {
+    border: 1px solid #ddd;
+    height: 40px;
+    position: relative;
+    width: 100%;
+}
+
+.widget_search form input {
+    border: 0 none;
+    height: 100%;
+    left: 0;
+    padding: 8px 40px 8px 8px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.widget_search form button {
+    background: #5d6b82 none repeat scroll 0 0;
+    border: 0 none;
+    color: #fff;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    width: 50px;
+}
+
+.widget_search form button:hover,
+.tagcloud a:hover {
+    background: #f39c12 none repeat scroll 0 0;
+    color: #fff;
+    border-color: #f39c12;
+}
+
+.widget_categories li {
+    margin: 5px 0;
+    position: relative;
+}
+
+.widget_categories li::before {
+    content: "\f105";
+    display: inline-block;
+    font-family: fontawesome;
+    margin-right: 10px;
+}
+
+.single-sidebar-widget li a:hover {
+    color: #f39c12;
+}
+
+.single-sidebar-widget {
+    -webkit-box-shadow: 0 3px 7px #ddd;
+    box-shadow: 0 3px 7px #ddd;
+    margin-bottom: 50px;
+    padding: 20px;
+}
+
+.widget_recent_entries li {
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.tagcloud a {
+    border: 1px solid #ddd;
+    display: inline-block;
+    margin-bottom: 9px;
+    margin-right: 5px;
+    padding: 5px 10px;
+    text-transform: capitalize;
+}
+
+blockquote {
+    background: #f1f1f1 none repeat scroll 0 0;
+    border: 0 none;
+    font-size: 16px;
+    font-style: italic;
+    line-height: 1.7em;
+    position: relative;
+    padding: 20px 30px;
+    text-transform: capitalize;
+    z-index: 1;
+}
+
+blockquote::after,
+blockquote::before {
+    content: "\f10d";
+    font-family: fontawesome;
+    font-size: 50px;
+    height: 50px;
+    left: 0;
+    line-height: 1;
+    opacity: 0.3;
+    position: absolute;
+    top: 0;
+    width: 50px;
+    z-index: -1;
+}
+
+blockquote::before {
+    bottom: 0;
+    content: "\f10e";
+    left: auto;
+    right: 8px;
+    top: auto;
+}
+
+.share-button,
+.comments-area,
+.comments-form-area {
+    -webkit-box-shadow: 0 3px 7px #ddd;
+    box-shadow: 0 3px 7px #ddd;
+    margin-bottom: 50px;
+    padding: 20px;
+}
+
+.comments-area h4,
+.comments-form-area h4 {
+    margin-bottom: 30px;
+}
+
+.comments-area ul li {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    padding-left: 90px;
+    position: relative;
+}
+
+.comments-area ul li:nth-child(2n) {
+    margin-left: 80px;
+}
+
+.comments-area ul li .comments-author-thumb {
+    height: 80px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 80px;
+}
+
+.half-width input {
+    border: 1px solid #ddd;
+    margin-bottom: 14px;
+    padding: 10px;
+    width: calc(50% - 10px);
+}
+
+.comment-form textarea {
+    border: 1px solid #ddd;
+    margin-bottom: 15px;
+    padding: 10px;
+    width: 100%;
+}
+
+.comment-form button {
+    background: #5d6b82 none repeat scroll 0 0;
+    border: 0 none;
+    color: #fff;
+    padding: 10px 20px;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+
+.comment-form button:hover {
+    background: #f39c12 none repeat scroll 0 0;
+}
+
+/*-------------------------------
+    22. SERVICE PAGE
+-------------------------------*/
+
+.service-image {
+    margin-bottom: 40px;
+}
+
+.service-image img {
+    width: 100%;
+}
+
+.service-details-text {
+    margin-bottom: 50px;
+}
+
+.service-menu h4 {
+    background: #f39c12 none repeat scroll 0 0;
+    color: #fff;
+    margin-bottom: 0;
+    padding: 10px;
+    text-align: center;
+}
+
+.service-menu ul {
+    border: 1px solid #ddd;
+}
+
+.service-menu > ul li {
+    border-top: 1px dashed #ddd;
+    display: block;
+    margin-top: -1px;
+}
+
+.service-menu ul li a {
+    display: block;
+    padding: 10px 20px;
+}
+
+.service-menu ul li a i {
+    float: right;
+}
+
+.service-menu ul li a:hover {
+    color: #f39c12;
+}
+
+/*------------------------------
+    23. 404 ERROR PAGE
+-------------------------------*/
+
+.error-content img {
+    margin-bottom: 40px;
+}
+
+.error-content h3 {}
+
+.error-content h2,
+.error-content h3 {
+    letter-spacing: 1px;
+    text-transform: capitalize;
+}
+
+.error-area .read-more {
+    width: auto;
+}

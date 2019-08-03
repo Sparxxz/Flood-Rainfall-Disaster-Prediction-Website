@@ -1,0 +1,285 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
+<head>
+    <!--====== USEFULL META ======-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Transportation & Agency Template is a simple Smooth transportation and Agency Based Template" />
+    <meta name="keywords" content="Portfolio, Agency, Onepage, Html, Business, Blog, Parallax" />
+
+    <!--====== TITLE TAG ======-->
+    <title>Flood Prediction</title>
+
+    <!--====== FAVICON ICON =======-->
+    <!--====== FAVICON ICON =======-->
+    <link rel="shortcut icon" type="image/ico" href="{{ url_for('static',filename='img/favicon.png')}}" />
+
+    <!--====== STYLESHEETS ======-->
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/normalize.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/animate.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/stellarnav.min.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/owl.carousel.css')}}">
+    <link href="{{ url_for('static',filename='css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{ url_for('static',filename='css/font-awesome.min.css')}}" rel="stylesheet">
+
+    <!--====== MAIN STYLESHEETS ======-->
+    <link href="{{ url_for('static',filename='style.css')}}" rel="stylesheet">
+    <link href="{{ url_for('static',filename='css/responsive.css')}}" rel="stylesheet">
+
+    <script src="{{ url_for('static',filename='js/vendor/modernizr-2.8.3.min.js')}}"></script>
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+</head>
+
+<body class="single-page">
+
+    <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!--- PRELOADER -->
+    <div class="preeloader">
+        <div class="preloader-spinner"></div>
+    </div>
+
+    <!--SCROLL TO TOP-->
+    <a href="#home" class="scrolltotop"><i class="fa fa-long-arrow-up"></i></a>
+
+    <!--START TOP AREA-->
+    <header class="top-area single-page" id="home">
+        <div class="top-area-bg" data-stellar-background-ratio="0.6"></div>
+        <div class="header-top-area">
+            <!--MAINMENU AREA-->
+            <div class="mainmenu-area" id="mainmenu-area">
+                <div class="mainmenu-area-bg"></div>
+                <nav class="navbar">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <a href="#home" class="navbar-brand"><img src="{{ url_for('static',filename='img/logo.png')}}" style="margin-top: 10px;" alt="logo"></a>
+                        </div>
+                        <div id="main-nav" class="stellarnav">
+                            <ul id="nav" class="nav navbar-nav">
+                                <li><a href="{{ url_for('index')}}">home</a></li>
+                                <li><a href="{{ url_for('about_team')}}">about</a> </li>
+                                <li><a href="{{ url_for('service')}}">Service</a></li>
+                                <!-- <li><a href="blog.html">Blog</a></li> -->
+                                <li><a href="{{ url_for('contact')}}">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <!--END MAINMENU AREA END-->
+        </div>
+        <div class="welcome-area">
+            <div class="area-bg"></div>
+            <div class="container">
+                <div class="row flex-v-center">
+                    <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                        <div class="welcome-text text-center">
+                            <h2>Flood Prediction</h2>
+                            <ul class="page-location">
+                                <li><a href="{{ url_for('floodHome')}}">Back</a></li>
+                                <li>/</li>
+                                <li><a href="#">Flood Prediction</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--END TOP AREA-->
+
+    <!--ABOUT AREA-->
+    <section class="about-area gray-bg section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5 col-lg-5 col-sm-12 col-xs-12">
+                    <div class="about-left-content-area wow fadeIn" style="font-family: 'Roboto', sans-serif;font-size: 14px;line-height: 1.7em;font-weight: 400;color: #687284;">
+                        <table class="table table-bordered" style="width: 80%;">
+                              <thead>
+                                <tr>
+                                  <th scope="col" style="text-align: center; font-size: 18px; background-color: #e3ebf7;"> PROPERTIES</th>
+                                  <th scope="col" style="text-align: center; font-size: 18px; background-color: #e3ebf7;"> RESULT</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td style="text-align: center; background-color: white;">Discharge</td>
+                                  <td style="text-align: center; background-color: white;">{{result[0]}}</td>
+                                </tr>
+                                <tr>
+                                  <td style="text-align: center; background-color: white;">Flood Runoff</td>
+                                  <td style="text-align: center; background-color: white;">{{result[1]}}</td>
+                                </tr>
+                                <tr>
+                                  <td style="text-align: center; background-color: white;">Daily Runoff</td>
+                                  <td style="text-align: center; background-color: white;">{{result[2]}}</td>
+                                </tr>
+                                <tr>
+                                <tr>
+                                  <td style="text-align: center; background-color: white;">Weekly Runoff</td>
+                                  <td style="text-align: center; background-color: white;">{{result[3]}}</td>
+                                </tr>
+                                <tr>
+                                  <td style="text-align: center; background-color: white;">Mean Absolute Error</td>
+                                  <td style="text-align: center; background-color: white;">{{result[4]}}</td>
+                                </tr>
+                                <tr>
+                                  <td style="text-align: center; background-color: white;">Predicted Water Level</td>
+                                  <td style="text-align: center; background-color: white;">{{result[5]}}</td>
+                                </tr>
+                                <tr>
+                                  <td style="text-align: center; background-color: white;">Actual Water level</td>
+                                  <td style="text-align: center; background-color: white;">{{result[6]}}</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                    </div>
+                </div>
+                <div class="col-md-7 col-lg-7 col-sm-12 col-xs-12">
+                    <div class="about-content-area wow fadeIn">
+                        <div class="about-content">
+                            <!-- Flood Image -->
+                            <img src="{{ url_for('static',filename='img/flood.png')}}" style=" height: 400px;
+ width: auto;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--ABOUT AREA END-->
+
+
+
+
+       <!--FOOER AREA-->
+    <div class="footer-area dark-bg">
+        <div class="footer-area-bg"></div>
+        <div class="footer-top-area wow fadeIn">
+        </div>
+        <div class="footer-bottom-area wow fadeIn">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12">
+                        <div class="single-footer-widget footer-about">
+                            <h3>About Us</h3>
+                            <p>IIIT Bhubaneswar.</p>
+                            <ul>
+                                <li><i class="fa fa-phone"></i> <a href="callto:+91-7007466895">+91-7007466895</a></li>
+                                <li><i class="fa fa-map-marker"></i> <a href="mailto:rheart80@gmail.com">rheart70@gmail.com</a></li>
+                                <li><i class="fa fa-phone"></i> Orissa, 751003, India.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12">
+                        <div class="single-footer-widget twitter-widget">
+                            <h3>Latest Tweets</h3>
+                            <ul>
+                                <li>
+                                    <div class="twitter-icon"><i class="fa fa-phone"></i></div>
+                                    <div class="tweet-detail">
+                                        <p>Today it was like Niagara Falls following heavy, persistent rain in County Durham.</p>
+                                        <a href="#https://twitter.com/hashtag/flooding" class="tweet-meta">5 Miniutes Ago</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="twitter-icon"><i class="fa fa-phone"></i></div>
+                                    <div class="tweet-detail">
+                                        <p>For two days heavy #rainfall has been pounding the Papuan highlands #Landslides.</p>
+                                        <a href="https://twitter.com/hashtag/rainfall?lang=en" class="tweet-meta">5 Miniutes Ago</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12">
+                        <div class="single-footer-widget list-widget">
+                            <h3>Customer Service</h3>
+                            <ul>
+                                <li><a href="{{ url_for('contact')}}">Contact Us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12">
+                        <div class="single-footer-widget instafeed-widget">
+                            <h3>Related Pictures</h3>
+                            <ul>
+                                <li><a href="https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwjsqqiaxIzhAhXYF3IKHc9iApEQjRx6BAgBEAU&url=https%3A%2F%2Fdenverite.com%2F2018%2F07%2F24%2Fflood-season-has-just-begun-heres-what-to-look-out-for-as-the-rains-fall%2F&psig=AOvVaw1IgQL2LBQFlt2T9xWs4Fch&ust=1553027391906825"><img src="{{ url_for('static',filename='img/instafeed/1.jpg')}}" alt=""></a></li>
+                                <li><a href="http://tides.bangordailynews.com/tag/flooding/"><img src="{{ url_for('static',filename='img/instafeed/2.jpg')}}" alt=""></a></li>
+                                <li><a href="https://shoalcreekconservancy.org/faces-of-flooding/"><img src="{{ url_for('static',filename='img/instafeed/3.jpg')}}" alt=""></a></li>
+                                <li><a href="https://www.duluthnewstribune.com/news/4120838-record-rainfall-causes-flooding-twin-cities-area"><img src="{{ url_for('static',filename='img/instafeed/4.jpg')}}" alt=""></a></li>
+                                <li><a href="https://www.skymetweather.com/content/climate-change/climate-change-in-india-bringing-more-rain-than-normal/"><img src="{{ url_for('static',filename='img/instafeed/5.jpg')}}" alt=""></a></li>
+                                <li><a href="https://www.skymetweather.com/content/weather-news-and-analysis/heavy-rain-and-flood-in-philippines-severely-impacts-normal-life/"><img src="{{ url_for('static',filename='img/instafeed/6.jpg')}}" alt=""></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="footer-border"> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                        <div class="footer-copyright wow fadeIn">
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            <!-- <p><script></script><i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="#" target="_blank"></a></p> -->
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                        <div class="footer-social-bookmark text-right wow fadeIn">
+                            <ul class="social-bookmark">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-vimeo"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-behance"></i></a></li>
+                                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--FOOER AREA END-->
+
+
+
+    <!--====== SCRIPTS JS ======-->
+    <script src="{{ url_for('static',filename='js/vendor/jquery-1.12.4.min.js')}}"></script>
+    <script src="{{ url_for('static',filename='js/vendor/bootstrap.min.js')}}"></script>
+
+    <!--====== PLUGINS JS ======-->
+    <script src="{{ url_for('static',filename='js/vendor/jquery.easing.1.3.js')}}"></script>
+    <script src="{{ url_for('static',filename='js/vendor/jquery-migrate-1.2.1.min.js')}}"></script>
+    <script src="{{ url_for('static',filename='js/vendor/jquery.appear.js')}}"></script>
+    <script src="{{ url_for('static',filename='js/owl.carousel.min.js')}}"></script>
+    <script src="{{ url_for('static',filename='js/stellar.js')}}"></script>
+    <script src="{{ url_for('static',filename='js/wow.min.js')}}"></script>
+    <script src="{{ url_for('static',filename='js/stellarnav.min.js')}}"></script>
+    <script src="{{ url_for('static',filename='js/contact-form.js')}}"></script>
+    <script src="{{ url_for('static',filename='js/jquery.sticky.js')}}"></script>
+
+    <!--===== ACTIVE JS=====-->
+    <script src="{{ url_for('static',filename='js/main.js')}}"></script>
+    
+</body>
+
+</html>
